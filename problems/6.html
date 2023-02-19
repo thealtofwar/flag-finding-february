@@ -1,4 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <p>There's nothing here yet.</p>
+    <body>
+        <p>
+            I have an RSA key with n = 0x00b181b50ff4bccd845ddca25b59a23fe71f224523ba0a0ec7f1abcb9e92606701e049233744773984c53d6622284158fa2031d2d333f3e48611756807b3f34637783899c63353df7afcbbc9c4b25a5d7993155ea3b02e37010ff34719eba51b543d0015cc9a06c71b2510a3bb510ba9fc19b29faddbdbc36ef3855b42818bee191d0ecf597ddf96a888a372159c5cbf2db150899e710f43add4838f7174aef638efd2cebaba3f96ae570b3158ee4706954442271bd674e7e022c035b55ed4b39e84d6e589f55060670d0dc594e0f66123aba02c1e4331d5bbf822095c6c571cc365dda56a8b7a69e77c9f8bccc215e6f6dcf696554d1fd6f81696df5c89022bdf<br>
+            I'll also tell you that p + q = 0x1aa8da94ec1e85c1d0932a6e3a3b924eea969f088779557d2cd56b2fcbb50e98a64e56767ac5bb35adf371c834656fd1f77afa45a285f42b8a8a6d4e82e5e3d8b764096582a972f63d5b49e5463bb9b1ac24189737fd137c6d605b6f66668d7be6df429ace8dc7a8593e6bbc248a17b0ff797e903c2fdc30e49eb495055b11cc0
+            Send the two primes in the Discord
+        </p>
+        <details>
+            <summary>Hint 1</summary>
+            The two primes in RSA are such that p * q = n
+        </details>
+        <details>
+            <summary>Hint 2</summary>
+            p + q = x
+            p = x - q
+            (x - q) * q = n
+            q ^ 2 - qx - n = 0
+            q = (- x +- sqrt(q^2 - 4n)) / 2
+        </details>    
+    </body>
 </html>
