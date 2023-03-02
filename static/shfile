@@ -1,0 +1,154 @@
+#!/bin/sh
+# This is a shell archive (produced by GNU sharutils 4.15.2).
+# To extract the files from this archive, save it to some FILE, remove
+# everything before the '#!/bin/sh' line above, then type 'sh FILE'.
+#
+lock_dir=_sh34574
+# Made on 2023-03-01 22:19 PST by <pandaninjas@laptop-linux>.
+# Source directory was '/home/pandaninjas/fff-files'.
+#
+# Existing files will *not* be overwritten, unless '-c' is specified.
+#
+# This shar contains:
+# length mode       name
+# ------ ---------- ------------------------------------------
+#    272 -rw-rw-r-- out.tar.gz
+#
+MD5SUM=${MD5SUM-md5sum}
+f=`${MD5SUM} --version | egrep '^md5sum .*(core|text)utils'`
+test -n "${f}" && md5check=true || md5check=false
+${md5check} || \
+  echo 'Note: not verifying md5sums.  Consider installing GNU coreutils.'
+if test "X$1" = "X-c"
+then keep_file=''
+else keep_file=true
+fi
+echo=echo
+save_IFS="${IFS}"
+IFS="${IFS}:"
+gettext_dir=
+locale_dir=
+set_echo=false
+
+for dir in $PATH
+do
+  if test -f $dir/gettext \
+     && ($dir/gettext --version >/dev/null 2>&1)
+  then
+    case `$dir/gettext --version 2>&1 | sed 1q` in
+      *GNU*) gettext_dir=$dir
+      set_echo=true
+      break ;;
+    esac
+  fi
+done
+
+if ${set_echo}
+then
+  set_echo=false
+  for dir in $PATH
+  do
+    if test -f $dir/shar \
+       && ($dir/shar --print-text-domain-dir >/dev/null 2>&1)
+    then
+      locale_dir=`$dir/shar --print-text-domain-dir`
+      set_echo=true
+      break
+    fi
+  done
+
+  if ${set_echo}
+  then
+    TEXTDOMAINDIR=$locale_dir
+    export TEXTDOMAINDIR
+    TEXTDOMAIN=sharutils
+    export TEXTDOMAIN
+    echo="$gettext_dir/gettext -s"
+  fi
+fi
+IFS="$save_IFS"
+if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null
+then if (echo -n test; echo 1,2,3) | grep n >/dev/null
+     then shar_n= shar_c='
+'
+     else shar_n=-n shar_c= ; fi
+else shar_n= shar_c='\c' ; fi
+f=shar-touch.$$
+st1=200112312359.59
+st2=123123592001.59
+st2tr=123123592001.5 # old SysV 14-char limit
+st3=1231235901
+
+if   touch -am -t ${st1} ${f} >/dev/null 2>&1 && \
+     test ! -f ${st1} && test -f ${f}; then
+  shar_touch='touch -am -t $1$2$3$4$5$6.$7 "$8"'
+
+elif touch -am ${st2} ${f} >/dev/null 2>&1 && \
+     test ! -f ${st2} && test ! -f ${st2tr} && test -f ${f}; then
+  shar_touch='touch -am $3$4$5$6$1$2.$7 "$8"'
+
+elif touch -am ${st3} ${f} >/dev/null 2>&1 && \
+     test ! -f ${st3} && test -f ${f}; then
+  shar_touch='touch -am $3$4$5$6$2 "$8"'
+
+else
+  shar_touch=:
+  echo
+  ${echo} 'WARNING: not restoring timestamps.  Consider getting and
+installing GNU '\''touch'\'', distributed in GNU coreutils...'
+  echo
+fi
+rm -f ${st1} ${st2} ${st2tr} ${st3} ${f}
+#
+if test ! -d ${lock_dir} ; then :
+else ${echo} "lock directory ${lock_dir} exists"
+     exit 1
+fi
+if mkdir ${lock_dir}
+then ${echo} "x - created lock directory ${lock_dir}."
+else ${echo} "x - failed to create lock directory ${lock_dir}."
+     exit 1
+fi
+# ============= out.tar.gz ==============
+if test -n "${keep_file}" && test -f 'out.tar.gz'
+then
+${echo} "x - SKIPPING out.tar.gz (file already exists)"
+
+else
+${echo} "x - extracting out.tar.gz (text)"
+  sed 's/^X//' << 'SHAR_EOF' | uudecode &&
+begin 600 out.tar.gz
+M'XL(`````````^W206O",!0'\-=5-Z=?P,,8/>Q<TAFK.^VP8T$*;CL))5,K
+MD1K%MJ"3'?:5QNY^CGV#?0R;RM@8BB=%X?^#ESR2%UX("674MU_EA/:(95R7
+MZ]EIU-G?.5=S;LGA7&<-[M:).9RYC"RVSTO]2.-$3"V+)D+UA))J*.*-=;OV
+M3Y3OF85RGEU\B.>OSE+=9+F.$EU1&(F!G<R2I\=+,NU[ZNE(9Q4R"M\F43Y(
+M%8[;_>Y#E+XL1D+-@S#[4G$P3T?!]*XY&,OA6]GWC+-K<UN?:KYN9/'YKK/?
+MKL5UUW\=?:]XOCYA4$O7'_C-````````````````````````CL$*?'.5X@`H
+"``!U
+`
+end
+SHAR_EOF
+  (set 20 23 03 01 22 16 48 'out.tar.gz'
+   eval "${shar_touch}") && \
+  chmod 0664 'out.tar.gz'
+if test $? -ne 0
+then ${echo} "restore of out.tar.gz failed"
+fi
+  if ${md5check}
+  then (
+       ${MD5SUM} -c >/dev/null 2>&1 || ${echo} 'out.tar.gz': 'MD5 check failed'
+       ) << \SHAR_EOF
+72799fc024fb1de1ce2c95958a2eab79  out.tar.gz
+SHAR_EOF
+
+else
+test `LC_ALL=C wc -c < 'out.tar.gz'` -ne 272 && \
+  ${echo} "restoration warning:  size of 'out.tar.gz' is not 272"
+  fi
+fi
+if rm -fr ${lock_dir}
+then ${echo} "x - removed lock directory ${lock_dir}."
+else ${echo} "x - failed to remove lock directory ${lock_dir}."
+     exit 1
+fi
+exit 0
